@@ -1,2 +1,2 @@
-project_id = "REPLACE_ME"
-region     = "us-central1"
+project_id = "encoded-copilot-362316"
+region     = "us-east4"
