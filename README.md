@@ -8,22 +8,31 @@ This is a simple script to bootstrap a GKE cluster with a few basic components.
 - [knative client](https://github.com/knative/client/releases/tag/knative-v1.1.0)
 - [terraform](https://www.terraform.io/downloads.html)
 - [Flux CLI](https://fluxcd.io/flux/get-started/#install-the-flux-cli)
+- [Homebrew](https://brew.sh/) (optional)
 
 ### Install gcloud
 ```bash
-$ curl https://sdk.cloud.google.com | bash
-$ exec -l $SHELL
-$ gcloud init
+curl https://sdk.cloud.google.com | bash
+```
+
+#### Access GKE Cluster
+```bash
+exec -l $SHELL 
+```
+
+#### Initialize gcloud
+```bash
+gcloud init
 ```
 
 ### Install kubectl
 ```bash
-$ gcloud components install kubectl
+gcloud components install kubectl
 ```
 
 ### Install helm
 ```bash
-$ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
 ```
 
 ### Install knative client
@@ -51,7 +60,45 @@ echo "Test kn installation"
 kn version
 ```
 
+### Install terraform
+#### Clone the release
+```bash
+wget https://releases.hashicorp.com/terraform/0.14.5/terraform_0.14.5_linux_amd64.zip
+```
+#### Unzip the package
+```bash
+unzip terraform_0.14.5_linux_amd64.zip
+```
+#### Move terraform to /usr/local/bin
+```bash
+sudo mv terraform /usr/local/bin/
+```
+#### Add terraform to your PATH
+```bash
+echo 'export PATH=$PATH:/usr/local/bin/terraform' >> ~/.bashrc 
+```
+#### Test terraform installation
+```bash
+echo "Test terraform installation"
+terraform version
+```
 
+### Install Flux CLI
+#### Linux AMD64
+Clone the release
+```bash
+brew install fluxcd/tap/flux
+```
+#### Add flux to your PATH
+```bash
+echo 'export PATH=$PATH:/usr/local/bin/flux' >> ~/.bashrc 
+```
+
+#### Export Github Credentials
+```bash
+export GITHUB_TOKEN=<your github token>
+export GITHUB_USER=<your github username>
+```
 
 ## Usage
 1. Clone this repo
