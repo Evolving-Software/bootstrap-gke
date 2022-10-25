@@ -45,3 +45,6 @@ This is a simple script to bootstrap a GKE cluster with a few basic components.
 APGL-3.0 © [RDS Ventures LLC](https://evolvingsoftware.io)
 
 This license is based on the [GNU Affero General Public License](https://www.gnu.org/licenses/agpl-3.0.en.html) and is intended to protect the source code of the project and any derivative works. It is not intended to protect the data of the project. If you are using this project to store data, you should consider using a different license. Read the [License](LICENSE.md) for more information.
+
+## Acknowledgements
+Adopted from [Learn Terraform - Provision a GKE Cluster](https://github.com/hashicorp/learn-terraform-provision-gke-cluster) and [Knative Install ](https://knative.dev/docs/install/yaml-install/serving/install-serving-with-yaml/)
