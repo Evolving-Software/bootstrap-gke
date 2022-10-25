@@ -25,7 +25,7 @@ This is a simple script to bootstrap a GKE cluster with a few basic components.
 1. Creates a GKE cluster
 2. Installs [Knative Serving](https://knative.dev/docs/serving/)
 3. Installs [Knative Eventing](https://knative.dev/docs/eventing/)
-4. Installs [Flux](https://fluxcd.io/)
+4. Installs [Flux](https://fluxcd.io/) (Not yet implemented)
 
 ## What does it not do?
 1. This project does not create a git repo for you. You will need to create a git repo and add the flux manifests to it.
