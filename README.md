@@ -6,6 +6,8 @@ This is a simple script to bootstrap a GKE cluster with a few basic components.
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - [helm](https://helm.sh/docs/using_helm/#installing-helm)
 - [knative client](https://github.com/knative/client/releases/tag/knative-v1.1.0)
+- [terraform](https://www.terraform.io/downloads.html)
+
 
 ## Usage
 1. Clone this repo
