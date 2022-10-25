@@ -41,5 +41,5 @@ This is a simple script to bootstrap a GKE cluster with a few basic components.
 4. Push to your branch
 5. Create a pull request
 
-## [License](LICENSE)
+## [License](LICENSE.md)
 APGL-3.0 © [RDS Ventures LLC](https://evolvingsoftware.io)
