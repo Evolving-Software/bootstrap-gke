@@ -7,6 +7,37 @@ This is a simple script to bootstrap a GKE cluster with a few basic components.
 - [helm](https://helm.sh/docs/using_helm/#installing-helm)
 - [knative client](https://github.com/knative/client/releases/tag/knative-v1.1.0)
 - [terraform](https://www.terraform.io/downloads.html)
+- [Flux CLI](https://fluxcd.io/flux/get-started/#install-the-flux-cli)
+
+### Install gcloud
+```bash
+$ curl https://sdk.cloud.google.com | bash
+$ exec -l $SHELL
+$ gcloud init
+```
+
+### Install kubectl
+```bash
+$ gcloud components install kubectl
+```
+
+### Install helm
+```bash
+$ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+```
+
+### Install knative client
+
+Linux AMD64
+```bash
+$ curl -L https://github.com/knative/client/releases/download/knative-v1.1.0/kn-linux-amd64
+sudo mv kn-linux-amd64 /usr/local/bin/kn
+sudo chmod +x /usr/local/bin/kn
+echo 'export PATH=$PATH:/usr/local/bin/kn' >> ~/.bashrc
+echo "Test kn installation"
+kn version
+```
+
 
 
 ## Usage
@@ -36,6 +67,7 @@ This is a simple script to bootstrap a GKE cluster with a few basic components.
 - [Flux](https://fluxcd.io/)
 - [Kubernetes](https://kubernetes.io/)
 - [GKE](https://cloud.google.com/kubernetes-engine/)
+- [Flux CLI](https://knative.dev/docs/)
 
 ## Contributing
 1. Fork this repo
