@@ -28,13 +28,26 @@ $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | b
 
 ### Install knative client
 
-Linux AMD64
+#### Linux AMD64
+Clone the release
 ```bash
-curl -L https://github.com/knative/client/releases/download/knative-v1.1.0/kn-linux-amd64 \
-sudo mv kn-linux-amd64 /usr/local/bin/kn \
-sudo chmod +x /usr/local/bin/kn \
-echo 'export PATH=$PATH:/usr/local/bin/kn' >> ~/.bashrc \
-echo "Test kn installation" \
+curl -L https://github.com/knative/client/releases/download/knative-v1.1.0/kn-linux-amd64
+```
+Rename to "kn" and move to /usr/local/bin
+```bash
+sudo mv kn-linux-amd64 /usr/local/bin/kn
+```
+Make the file executable
+```bash
+sudo chmod +x /usr/local/bin/kn 
+```
+Add 'kn' to your PATH
+```bash
+echo 'export PATH=$PATH:/usr/local/bin/kn' >> ~/.bashrc 
+```
+Test KN Installation
+```bash
+echo "Test kn installation" 
 kn version
 ```
 
