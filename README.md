@@ -30,7 +30,7 @@ $ curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | b
 
 Linux AMD64
 ```bash
-$ curl -L https://github.com/knative/client/releases/download/knative-v1.1.0/kn-linux-amd64
+curl -L https://github.com/knative/client/releases/download/knative-v1.1.0/kn-linux-amd64
 sudo mv kn-linux-amd64 /usr/local/bin/kn
 sudo chmod +x /usr/local/bin/kn
 echo 'export PATH=$PATH:/usr/local/bin/kn' >> ~/.bashrc
